@@ -5,7 +5,7 @@ import time
 button = Pin(14, Pin.IN, Pin.PULL_DOWN)
 
 while True:
-    if button.value():
-	    #led.toggle()
-	    print('button clicked')
-	    time.sleep(0.5)
+   if button.value():
+      #led.toggle()
+      print('button clicked')
+      time.sleep(0.5)
