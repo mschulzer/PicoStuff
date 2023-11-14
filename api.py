@@ -7,8 +7,8 @@ from time import sleep
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 
-ssid = 'MiniPhone'
-password = 'femtech2023'
+ssid = '...'
+password = '...'
 
 wlan.connect(ssid, password)
 
