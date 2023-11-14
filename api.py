@@ -28,8 +28,9 @@ if wlan.isconnected():
 
     while True:
         records = result.get('records', [])
-        val = [record['SolarPower'] for record in records]
-        pwm.duty_u16(val+10000)
+        wind = records[0]['OffshoreWindPower']
+        wind = wind * 15 # 15 er bare en tilfældig, men rimelig faktor
+        pwm.duty_u16(wind)
         
         sleep(10) # gentag hvert 10. sekund
 
